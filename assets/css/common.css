@@ -14,3 +14,9 @@ button {
     outline: none;
   }
 }
+
+i[class^="ico-"],
+i[class*="ico-"] {
+  display: inline-block;
+  vertical-align: top;
+}

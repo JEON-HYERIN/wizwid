@@ -1,0 +1,219 @@
+@import './reset.css';
+@import './common.css';
+@import './typo.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', 'Spoqa Han Sans Neo', 'sans-serif';
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  color: #000;
+  word-break: break-all;
+}
+
+#wrap {
+  min-width: 1260px;
+}
+
+.header {
+  position: relative;
+  min-width: 1260px;
+  min-height: 75px;
+}
+
+.header .logo {
+  padding: 35px 0px 0px 50px;
+}
+
+.header .logo a {
+  display: block;
+}
+
+.header .logo a::before {
+  content: '';
+  display: block;
+  width: 145px;
+  height: 19px;
+  background: url(../images/common/logo.svg) no-repeat;
+  background-size: 145px auto;
+}
+
+.header .group-util {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 55px;
+}
+
+.header .group-util .search-area {
+  position: relative;
+
+}
+
+.header .group-util .search {}
+
+.header .group-util .search-input {
+  width: 540px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #f1f3f8;
+  overflow: hidden;
+}
+
+.header .group-util .btn-search {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.header .group-util .ico-search {
+  width: 40px;
+  height: 40px;
+  background: url("../images/common/ico_search_01.svg") no-repeat center/20px 100%;
+}
+
+.header .rolling-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* overflow: hidden; */
+}
+
+.header .rolling-banner .swiper-wrapper {}
+
+.header .rolling-slide {}
+
+.header .rolling-slide .link-rolling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 80px;
+}
+
+.header .rolling-slide .link-rolling {}
+
+.header .rolling-slide .link-rolling .title {
+  display: block;
+  font-size: 13px;
+  line-height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.header .util-area {}
+
+.header .util-list {
+  display: flex;
+  column-gap: 15px;
+}
+
+.header .util-item {}
+
+.header .link-util {
+  position: relative;
+  display: block;
+  height: 40px;
+}
+
+.header .ico-util {
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/common/ico_login_01.svg");
+  background-repeat: no-repeat;
+  background-size: 28px auto;
+  background-position: center;
+}
+
+.header .util-item.login .ico-util {
+  background-image: url("../images/common/ico_login_01.svg");
+}
+
+.header .util-item.mypage .ico-util {
+  background-image: url("../images/common/ico_mypage_01.svg");
+}
+
+.header .util-item.history .ico-util {
+  background-image: url("../images/common/ico_history_01.svg");
+}
+
+.header .util-item.cart .ico-util {
+  background-image: url("../images/common/ico_cart_01.svg");
+}
+
+.header .util-item.cart .count {
+  position: absolute;
+  top: 10px;
+  right: 2px;
+  height: 15px;
+  padding: 0px 6px;
+  font-size: 10px;
+  line-height: 15px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  height: 126px;
+  /* background-color: #fff; */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 39px;
+  align-items: center;
+  /* left: 0; */
+  z-index: 9;
+  /* width: 100%; */
+  /* min-width: 1200px; */
+}
+
+.sticky-nav .column-left {
+  display: flex;
+}
+
+.sticky-nav .column-right {}
+
+.sticky-nav .gnb-list {
+  display: flex;
+  align-items: center;
+}
+
+.sticky-nav .gnb-list + .gnb-list::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 13px;
+  background-color: #000;
+  vertical-align: -6px;
+  margin: 0 13px;
+}
+
+.sticky-nav .gnb-item {}
+
+.sticky-nav .link-gnb {
+  display: inline-block;
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 27px 11px 18px;
+  position: relative;
+}
+
+body, #wrap {
+  height: 5000px;
+  position: relative;
+}
