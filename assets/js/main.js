@@ -8,3 +8,12 @@ const swiper = new Swiper('.rolling-banner', {
   direction: 'vertical'
   // spaceBetween: 100,
 });
+
+$(window).scroll(function() {
+  const scrollValue = $(document).scrollTop();
+  if(scrollValue > 0) {
+    $('.header').addClass('is-fixed');
+  } else {
+    $('.header').removeClass('is-fixed');
+  }
+})
