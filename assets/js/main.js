@@ -6,7 +6,6 @@ const swiper = new Swiper('.rolling-banner', {
   },
   loop: true,
   direction: 'vertical'
-  // spaceBetween: 100,
 });
 
 $(window).scroll(function() {
@@ -16,4 +15,13 @@ $(window).scroll(function() {
   } else {
     $('.header').removeClass('is-fixed');
   }
+})
+
+$('.link-gnb').on('mouseenter', function() {
+  $('.lnb-container').removeClass('is-visible');
+  $(this).siblings('.lnb-container').addClass('is-visible');
+})
+
+$('.lnb-container').on('mouseleave', function() {
+  $('.lnb-container').removeClass('is-visible');
 })
