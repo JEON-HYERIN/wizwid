@@ -65,3 +65,55 @@ i[class*="ico-"] {
   background: url(../images/common/ico_like_01.svg) no-repeat center center;
   background-size: 20px auto;
 }
+
+.product-list .brand {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  margin-bottom: 13px;
+}
+.product-list .name {
+  color: #000000;
+  line-height: 18px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.product-list .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-list .discount-price {
+  font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+}
+.product-list .disconut-rate {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ff4600;
+}
+
+.common-headline {
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.common-headline a {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 13px;
+}
+.common-headline a::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 13px;
+  background: url("../images/common/ico_more_01.svg") no-repeat right center;
+}
