@@ -88,9 +88,6 @@
   }
 }
 
-.section-new {
-  /* padding-top: 140px; */
-}
 .section-new .inner {
   display: flex;
   align-items: center;
@@ -141,12 +138,12 @@
 .section-new .link-category {
   display: block;
 }
-.section-new .link-category .thumb-box {
+.section-new .category-list .thumb-box {
   position: relative;
   padding-top: 122.22%;
 
 }
-.section-new .link-category .thumb-box img {
+.section-new .category-list .thumb-box img {
   position: absolute;
   top: 0;
   left: 0;
@@ -154,11 +151,11 @@
   height: 100%;
   object-fit: cover;
 }
-.section-new .link-category .title-box {
+.section-new .category-list .title-box {
   margin-top: 14px;
   text-align: center;
 }
-.section-new .link-category .title {
+.section-new .category-list .title {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
@@ -173,7 +170,7 @@
   display: block;
   padding-top: 17.65%;
 }
-.section-benefit .link-benefit img {
+.section-benefit .benefit-list img {
   position: absolute;
   top: 0;
   left: 0;
@@ -182,7 +179,6 @@
   object-fit: cover;
 }
 
-.section-wish {}
 .section-wish .headline {
   line-height: 46px;
     font-size: 34px;
@@ -195,7 +191,6 @@
 .section-wish .product-list-wrap {
   margin: 0 -5px;
 }
-.section-wish .product-list {}
 .section-wish .product-item {
   position: relative;
   width: 16.66%;
@@ -204,29 +199,29 @@
 .section-wish .link-product {
   display: block;
 }
-.section-wish .link-product .thumb-box {
+.section-wish .product-list .thumb-box {
   height: 19.17vw;
   max-height: 366.23px;
   margin-bottom: 15px;
 }
-.section-wish .link-product .thumb-box img {
+.section-wish .product-list .thumb-box img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
-.section-wish .link-product .info-box {
+.section-wish .product-list .info-box {
 
   padding-right: 14px;
   display: flex;
   flex-direction: column;
 }
-.section-wish .link-product .brand {
+.section-wish .product-list .brand {
   font-size: 14px;
     line-height: 18px;
     font-weight: 500;
     margin-bottom: 13px;
 }
-.section-wish .link-product .product {
+.section-wish .product-list .product {
   color: #000000;
     line-height: 18px;
     margin-bottom: 20px;
@@ -236,17 +231,17 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-.section-wish .link-product .price {
+.section-wish .product-list .price {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.section-wish .link-product .discount-price {
+.section-wish .product-list .discount-price {
   font-size: 16px;
     line-height: 22px;
     font-weight: 500;
 }
-.section-wish .link-product .disconut-rate {
+.section-wish .product-list .disconut-rate {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
@@ -278,12 +273,12 @@
 .section-lookbook .link-lookbook {
   display: block;
 }
-.section-lookbook .link-lookbook .thumb-box {
+.section-lookbook .lookbook-list .thumb-box {
   position: relative;
   padding-top: 119.42%;
   /* padding-top: 128%; */
 }
-.section-lookbook .link-lookbook .thumb-box img {
+.section-lookbook .lookbook-list .thumb-box img {
   position: absolute;
   top: 0;
   left: 0;
@@ -299,13 +294,13 @@
   transform: scale(1);
   opacity: 1;
 } 
-.section-lookbook .link-lookbook .text-box {
+.section-lookbook .lookbook-list .text-box {
   position: absolute;
   top: 85px;
   left: -120px;
   right: 200px;
 }
-.section-lookbook .link-lookbook .title {
+.section-lookbook .lookbook-list .title {
   font-size: 42px;
     font-weight: 300;
     line-height: 52px;
@@ -323,7 +318,7 @@
   opacity: 1;
   margin-left: 0;
 }
-.section-lookbook .link-lookbook .desc {
+.section-lookbook .lookbook-list .desc {
   font-size: 14px;
     line-height: 20px;
     max-height: 40px;
@@ -404,17 +399,17 @@
 .section-keyword .link-keyword {
   display: block;
 }
-.section-keyword .link-keyword .summary {
+.section-keyword .keyword-list .summary {
   display: block;
   margin-bottom: 8px;
   font-size: 16px;
   line-height: 21px;
 }
-.section-keyword .link-keyword .thumb-box {
+.section-keyword .keyword-list .thumb-box {
   position: relative;
   padding-top: 119.25%;
 }
-.section-keyword .link-keyword .thumb-box::before {
+.section-keyword .keyword-list .thumb-box::before {
   content: '';
   position: absolute;
   top: 0;
@@ -425,7 +420,7 @@
   background-color: rgba(0, 0, 0, .2);
   pointer-events: none;
 }
-.section-keyword .link-keyword .thumb-box img {
+.section-keyword .keyword-list .thumb-box img {
   position: absolute;
   top: 0;
   left: 0;
@@ -433,7 +428,7 @@
   height: 100%;
   object-fit: cover;
 }
-.section-keyword .link-keyword .text-box {
+.section-keyword .keyword-list .text-box {
   position: absolute;
   bottom: 71px;
   left: 30px;
@@ -441,7 +436,7 @@
   width: 100%;
   max-width: 400px;
 }
-.section-keyword .link-keyword .title {
+.section-keyword .keyword-list .title {
   max-height: 104px;
   margin-bottom: 20px;
   font-size: 42px;
@@ -449,16 +444,68 @@
   line-height: 52px;
   color: #fff;
 }
-.section-keyword .link-keyword .hashtag {
+.section-keyword .keyword-list .hashtag {
   display: flex;
   column-gap: 3px;
   max-height: 28px;
 }
-.section-keyword .link-keyword .hashtag li {
+.section-keyword .keyword-list .hashtag li {
   padding: 0 12px;
   font-size: 12px;
   font-weight: 500;
   line-height: 28px;
   border-radius: 14px;
   background-color: rgba(255, 255, 255, .9);
+}
+
+.section-sale .product-list-wrap {
+  margin: 0 -5px;
+}
+
+.section-sale .product-item {
+  width: 20%;
+  padding: 0 5px;
+}
+.section-sale .product-list .thumb-box {
+  position: relative;
+  height: 23.18vw;
+  max-height: 442.34px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.section-sale .product-list .thumb-box img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.section-sale .product-list .mark {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  padding: 0 14px;
+  background-color: rgba(255, 255, 255, .9);
+}
+.section-sale .product-list .mark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-sale .product-list .discount-rate {
+  font-size: 30px;
+  line-height: 40px;
+}
+.section-sale .product-list .time {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #000;
+}
+.section-sale .product-list-wrap .btn-arrow {
+  margin-top: -87px;
+}
+.section-sale .btn-like {
+  top: 13px;
+  right: 13px;
 }

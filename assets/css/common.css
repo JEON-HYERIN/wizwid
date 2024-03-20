@@ -66,7 +66,12 @@ i[class*="ico-"] {
   background-size: 20px auto;
 }
 
+.product-list .link-product {
+  position: relative;
+  display: block;
+}
 .product-list .brand {
+  display: block;
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
@@ -89,10 +94,10 @@ i[class*="ico-"] {
 }
 .product-list .discount-price {
   font-size: 16px;
-    line-height: 22px;
-    font-weight: 500;
+  line-height: 22px;
+  font-weight: 500;
 }
-.product-list .disconut-rate {
+.product-list .discount-rate {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;

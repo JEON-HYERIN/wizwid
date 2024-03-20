@@ -113,6 +113,15 @@ new Swiper('.section-keyword .keyword-list-wrap', {
   },
 });
 
+new Swiper('.section-sale .product-list-wrap', {
+  slidesPerView: 'auto',
+  speed: 400,
+  navigation: {
+    prevEl: '.section-sale .btn-prev',
+    nextEl: '.section-sale .btn-next',
+  },
+});
+
 $(window).scroll(function() {
   const scrollValue = $(document).scrollTop();
   if(scrollValue > 0) {
