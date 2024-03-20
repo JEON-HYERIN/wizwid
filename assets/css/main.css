@@ -594,7 +594,6 @@
   object-fit: cover;
 }
 .section-capture .capture-list {
-  height: 566px;
   display: grid;
   grid-template-columns: 2fr 1fr 2fr 1fr;
   grid-template-rows: 1fr 1fr;
