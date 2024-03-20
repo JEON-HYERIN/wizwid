@@ -70,17 +70,15 @@
   right: 130px;
   background-image: url("../images/main/section-visual-arrow-right.svg");
 }
-.section-visual .swiper-pagination-progressbar { 
-  top: auto;
-  left: 50%;
-  bottom: -42px;
-  max-width: 1700px ;
+.section-visual .swiper-pagination-progressbar {
+  position: static;
+  max-width: 1700px;
   height: 2px;
-  transform: translate(-50%, 0);
-  background-color: #cccccc;
+  margin: 42px auto 0;
+  background-color: #ccc;
 }
 .section-visual .swiper-pagination-progressbar-fill {
-  background-color: #000000;
+  background-color: #000;
  }
 
  @media screen and (min-width: 1920px) {
@@ -90,4 +88,81 @@
   .section-visual .visual-banner .desc {
     font-size: 15px;
   }
+}
+
+.section-new {
+  padding-top: 140px;
+}
+.section-new .inner {
+  display: flex;
+  align-items: center;
+}
+.section-new .text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+.section-new .text-box .headline {
+  font-size: 1.46vw;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.section-new .text-box .count {
+  font-family: "Georgia";
+  font-size: 3.23vw;
+  line-height: 1;
+}
+.section-new .text-box .desc {
+  margin-top: 25px;
+  font-size: 0.73vw;
+  line-height: 1.4;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.section-new .text-box .more-view {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-top: 30px;
+  font-size: 0.68vw;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+.section-new .text-box .more-view::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 9px;
+  background: url("../images/main/section-new-arrow-fill.svg") no-repeat right center;
+}
+.section-new .category-list-wrap {
+  width: 80%;
+}
+.section-new .link-category {
+  display: block;
+}
+.section-new .link-category .thumb-box {
+  position: relative;
+  padding-top: 122.22%;
+
+}
+.section-new .link-category .thumb-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-new .link-category .title-box {
+  margin-top: 14px;
+  text-align: center;
+}
+.section-new .link-category .title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
 }

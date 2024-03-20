@@ -13,11 +13,12 @@ body {
   line-height: 1;
   color: #000;
   word-break: break-all;
+  background-color: #fff;
 }
 
 #wrap {
   min-width: 1260px;
-  min-height: 3000px;
+  min-height: 2000px;
 }
 
 .header {
@@ -239,6 +240,7 @@ body {
   top: 125px;
   left: 0;
   right: 0;
+  z-index: 9;
   justify-content: space-between;
   background-color: #fff;
   padding: 30px 50px 78px;

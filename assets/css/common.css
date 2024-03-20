@@ -20,3 +20,11 @@ i[class*="ico-"] {
   display: inline-block;
   vertical-align: top;
 }
+
+.common-inner {
+  position: relative;
+  /* max-width: 1900px; */
+  /* padding: 0 50px; */
+  max-width: 1700px;
+  margin: 0 auto;
+}

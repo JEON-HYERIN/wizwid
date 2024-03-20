@@ -24,6 +24,12 @@ new Swiper('.section-visual .swiper', {
   }
 });
 
+new Swiper('.section-new .category-list-wrap', {
+  slidesPerView: 6,
+  spaceBetween: 2
+});
+
+
 
 
 $(window).scroll(function() {
