@@ -122,6 +122,33 @@ new Swiper('.section-sale .product-list-wrap', {
   },
 });
 
+const brandSwiper = new Swiper('.section-brand .brand-list-wrap', {
+  autoplay: {
+    delay: 4000
+  },
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 140,
+  speed: 700,
+  navigation: {
+    prevEl: '.section-brand .btn-prev',
+    nextEl: '.section-brand .btn-next',
+  },
+  on: {
+    slideChange: function() {
+      const index = this.realIndex;
+      $('.section-brand .tab-item').eq(index).addClass('is-active').siblings().removeClass('is-active');
+    }
+  }
+});
+
+$('.section-brand .btn-tab').click(function() {
+  const index = $(this).parent().index();
+  brandSwiper.slideToLoop(index);
+  $('.section-brand .tab-item').eq(index).addClass('is-active').siblings().removeClass('is-active');
+});
+
+
 $(window).scroll(function() {
   const scrollValue = $(document).scrollTop();
   if(scrollValue > 0) {

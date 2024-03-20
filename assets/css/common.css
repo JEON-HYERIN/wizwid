@@ -60,6 +60,8 @@ i[class*="ico-"] {
 
 .btn-like {
   position: absolute;
+  top: 13px;
+  right: 13px;
   width: 30px;
   height: 30px;
   background: url(../images/common/ico_like_01.svg) no-repeat center center;
@@ -70,6 +72,11 @@ i[class*="ico-"] {
   position: relative;
   display: block;
 }
+
+.product-list .thumb-box {
+  margin-bottom: 15px;
+}
+
 .product-list .brand {
   display: block;
   font-size: 14px;
@@ -78,9 +85,9 @@ i[class*="ico-"] {
   margin-bottom: 13px;
 }
 .product-list .name {
-  color: #000000;
-  line-height: 18px;
   margin-bottom: 20px;
+  font-size: 13px;
+  line-height: 18px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -104,6 +111,20 @@ i[class*="ico-"] {
   color: #ff4600;
 }
 
+.hashtag {
+  display: flex;
+  column-gap: 3px;
+  max-height: 28px;
+}
+.hashtag li {
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 28px;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, .9);
+}
+
 .common-headline {
   font-size: 24px;
   line-height: 31px;
@@ -121,4 +142,29 @@ i[class*="ico-"] {
   width: 8px;
   height: 13px;
   background: url("../images/common/ico_more_01.svg") no-repeat right center;
+}
+
+.common-title {
+  max-height: 104px;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 52px;
+}
+.common-title.white {
+  color: #fff;
+}
+
+.thumb-dim {
+  position: relative;
+}
+.thumb-dim::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, .2);
+  pointer-events: none;
 }
