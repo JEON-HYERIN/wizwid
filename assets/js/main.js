@@ -1,12 +1,30 @@
-const rolling = document.querySelector('.rolling-banner');
-
-const swiper = new Swiper('.rolling-banner', {
+new Swiper('.rolling-banner', {
   autoplay: {
     delay: 3000,
   },
   loop: true,
   direction: 'vertical'
 });
+
+new Swiper('.section-visual .swiper', {
+  autoplay: {
+    delay: 3000,
+  },
+  loop: true,
+  speed: 600,
+  spaceBetween: 20,
+  slidesPerView: 'auto',
+  navigation: {
+    prevEl: '.section-visual .btn-prev',
+    nextEl: '.section-visual .btn-next',
+  },
+  pagination: {
+    el: ".section-visual .swiper-pagination",
+    type: "progressbar",
+  }
+});
+
+
 
 $(window).scroll(function() {
   const scrollValue = $(document).scrollTop();
@@ -25,3 +43,4 @@ $('.link-gnb').on('mouseenter', function() {
 $('.lnb-container').on('mouseleave', function() {
   $('.lnb-container').removeClass('is-visible');
 })
+
