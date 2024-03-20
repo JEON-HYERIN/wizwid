@@ -22,8 +22,8 @@ new Swiper('.section-visual .swiper', {
   spaceBetween: 20,
   slidesPerView: 'auto',
   navigation: {
-    prevEl: '.section-visual .btn-prev',
-    nextEl: '.section-visual .btn-next',
+    prevEl: '.section-visual .swiper-button-prev',
+    nextEl: '.section-visual .swiper-button-next',
   },
   pagination: {
     el: ".section-visual .swiper-pagination",
@@ -41,6 +41,14 @@ new Swiper('.section-benefit .benefit-list-wrap', {
   navigation: {
     prevEl: '.section-benefit .btn-prev',
     nextEl: '.section-benefit .btn-next',
+  },
+});
+
+new Swiper('.section-wish .wish-list-wrap', {
+  slidesPerView: 'auto',
+  navigation: {
+    prevEl: '.section-wish .btn-prev',
+    nextEl: '.section-wish .btn-next',
   },
 });
 

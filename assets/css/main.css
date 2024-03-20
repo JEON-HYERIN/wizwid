@@ -52,18 +52,19 @@
   line-height: 1.47;
   color: #fff;
 }
- .section-visual .btn {
+ .section-visual .swiper-button-prev,
+ .section-visual .swiper-button-next {
   width: 36px;
   height: 6.09%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 100%;
  }
-.section-visual .btn-prev {
+.section-visual .swiper-button-prev {
   left: 30px;
   background-image: url("../images/main/section-visual-arrow-left.svg");
  }
-.section-visual .btn-next { 
+.section-visual .swiper-button-next { 
   right: 130px;
   background-image: url("../images/main/section-visual-arrow-right.svg");
 }
@@ -180,21 +181,82 @@
   height: 100%;
   object-fit: cover;
 }
-.section-benefit .benefit-list-wrap .btn {
-  width: 40px;
-  height: 65px;
-  margin-top: 0;
-  transform: translateY(-50%);
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 13px auto;
+
+.section-wish {}
+.section-wish .headline {
+  line-height: 46px;
+    font-size: 34px;
+    letter-spacing: -0.5px;
+    z-index: 10;
+    transition: 600ms all;
+    font-weight: 300;
+    margin-bottom: 30px;
 }
-.section-benefit .benefit-list-wrap .btn-prev {
-  left: 0;
-  background-image: url("../images/common/swiper_left_arrow.svg");
+.section-wish .wish-list-wrap {
+  margin: 0 -5px;
 }
-.section-benefit .benefit-list-wrap .btn-next {
-  right: 0;
-  background-image: url("../images/common/swiper_right_arrow.svg");
+.section-wish .wish-list {}
+.section-wish .wish-item {
+  position: relative;
+  width: 16.66%;
+  padding: 0px 5px;
+}
+.section-wish .link-wish {
+  display: block;
+}
+.section-wish .link-wish .thumb-box {
+  height: 19.17vw;
+  max-height: 366.23px;
+  margin-bottom: 15px;
+}
+.section-wish .link-wish .thumb-box img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.section-wish .link-wish .info-box {
+
+  padding-right: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.section-wish .link-wish .brand {
+  font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    margin-bottom: 13px;
+}
+.section-wish .link-wish .product {
+  color: #000000;
+    line-height: 18px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.section-wish .link-wish .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-wish .link-wish .discount-price {
+  font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+}
+.section-wish .link-wish .disconut-rate {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ff4600;
+}
+.section-wish .btn-like {
+  top: 13px;
+  right: 13px;
+}
+.section-wish .btn-prev,
+.section-wish .btn-next {
+  margin-top: -59.5px;
 }
