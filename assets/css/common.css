@@ -28,3 +28,12 @@ i[class*="ico-"] {
   max-width: 1700px;
   margin: 0 auto;
 }
+
+.common-inner [class^="section-"] {
+  padding-top: 140px;
+}
+
+.swiper-button-prev:after, 
+.swiper-button-next:after {
+  display: none;
+}

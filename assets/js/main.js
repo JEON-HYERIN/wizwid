@@ -1,3 +1,10 @@
+// a태그 기본동작 방지
+$(function () {
+  $(document).on('click', 'a[href="#"]', function (e) {
+    e.preventDefault();
+  });
+})
+
 new Swiper('.rolling-banner', {
   autoplay: {
     delay: 3000,
@@ -27,6 +34,14 @@ new Swiper('.section-visual .swiper', {
 new Swiper('.section-new .category-list-wrap', {
   slidesPerView: 6,
   spaceBetween: 2
+});
+
+new Swiper('.section-benefit .benefit-list-wrap', {
+  slidesPerView: 'auto',
+  navigation: {
+    prevEl: '.section-benefit .btn-prev',
+    nextEl: '.section-benefit .btn-next',
+  },
 });
 
 

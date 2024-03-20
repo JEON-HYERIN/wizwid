@@ -52,9 +52,6 @@
   line-height: 1.47;
   color: #fff;
 }
-.section-visual .btn::after {
-  display: none;
- }
  .section-visual .btn {
   width: 36px;
   height: 6.09%;
@@ -91,7 +88,7 @@
 }
 
 .section-new {
-  padding-top: 140px;
+  /* padding-top: 140px; */
 }
 .section-new .inner {
   display: flex;
@@ -165,4 +162,39 @@
   font-weight: 500;
   line-height: 16px;
   text-align: center;
+}
+
+.section-benefit .benefit-item {
+  width: 50%;
+}
+.section-benefit .link-benefit {
+  position: relative;
+  display: block;
+  padding-top: 17.65%;
+}
+.section-benefit .link-benefit img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-benefit .benefit-list-wrap .btn {
+  width: 40px;
+  height: 65px;
+  margin-top: 0;
+  transform: translateY(-50%);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px auto;
+}
+.section-benefit .benefit-list-wrap .btn-prev {
+  left: 0;
+  background-image: url("../images/common/swiper_left_arrow.svg");
+}
+.section-benefit .benefit-list-wrap .btn-next {
+  right: 0;
+  background-image: url("../images/common/swiper_right_arrow.svg");
 }
