@@ -148,6 +148,17 @@ $('.section-brand .btn-tab').click(function() {
   $('.section-brand .tab-item').eq(index).addClass('is-active').siblings().removeClass('is-active');
 });
 
+new Swiper('.section-pick .pick-list-wrap', {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 10,
+  speed: 400,
+  navigation: {
+    prevEl: '.section-pick .btn-prev',
+    nextEl: '.section-pick .btn-next',
+  },
+});
+
 
 $(window).scroll(function() {
   const scrollValue = $(document).scrollTop();
