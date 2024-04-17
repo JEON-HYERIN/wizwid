@@ -58,8 +58,8 @@ const lookbookSlide1 = new Swiper('.section-lookbook .lookbook-list-wrap', {
   // },
   loop: true,
   speed: 600,
-  slidesPerView: 3,
-  // spaceBetween: 60,
+  slidesPerView: '3',
+  spaceBetween: 60,
   centeredSlides: true,
   navigation: {
     prevEl: '.section-lookbook .btn-prev',
@@ -67,9 +67,27 @@ const lookbookSlide1 = new Swiper('.section-lookbook .lookbook-list-wrap', {
   },
   on: {
     slideChange: function() {
-      // console.log('hello');
+      const subLookbook = document.querySelectorAll('.sub-lookbook .product-list-wrap');
+      const realIndex = this.realIndex;
+
+      subLookbook.forEach(function(el, index) {
+        el.classList.remove('is-visible');
+        subLookbook[realIndex].classList.add('is-visible');
+      });
     }
   }
+});
+
+const subLookbook = new Swiper('.section-lookbook .sub-lookbook .product-list-wrap', {
+  speed: 600,
+  slidesPerView: 4,
+  spaceBetween: 10,
+  pagination: {
+    el: '.sub-lookbook .swiper-pagination',
+    type: 'progressbar',
+  },
+  observer: true,
+  observeParents: true,
 });
 
 // const lookbookSlide2 = new Swiper('.section-lookbook .product-list-wrap', {
@@ -161,7 +179,7 @@ new Swiper('.section-pick .pick-list-wrap', {
 
 new Swiper('.section-editorial .editorial-list-wrap', {
   loop: true,
-  speed: 400,
+  speed: 900,
   navigation: {
     prevEl: '.section-editorial .btn-prev',
     nextEl: '.section-editorial .btn-next',
@@ -199,3 +217,21 @@ $('.lnb-container').on('mouseleave', function() {
   $('.lnb-container').removeClass('is-visible');
 })
 
+// top btn
+const topBtn = document.querySelector('.btn-top');
+
+topBtn.addEventListener('click', () => {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+});
+
+window.addEventListener('scroll', () => {
+  const target = document.querySelector('.section-benefit');
+  const targetPosition = target.getBoundingClientRect().top;
+  const CLASSNAME = 'is-invisible';
+
+  if(window.scrollY >= targetPosition) {
+    topBtn.classList.remove(CLASSNAME);
+  } else {
+    topBtn.classList.add(CLASSNAME);
+  }
+})
