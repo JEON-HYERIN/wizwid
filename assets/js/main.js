@@ -159,6 +159,27 @@ new Swiper('.section-pick .pick-list-wrap', {
   },
 });
 
+new Swiper('.section-editorial .editorial-list-wrap', {
+  loop: true,
+  speed: 400,
+  navigation: {
+    prevEl: '.section-editorial .btn-prev',
+    nextEl: '.section-editorial .btn-next',
+  },
+  pagination: {
+    el: '.section-editorial .tab-list',
+    clickable: true,
+    renderBullet: function (index, className) {
+      const bulletName = ["WEEKLY CLOSET", "WHERE TO GO", "BRANDPEDIA", "KEYWORD#", "MARKETER'S DIARY", "SNACK FILM"];
+      return `
+      <li class="tab-item ${className}">
+        <button type="button" class="btn-tab">${bulletName[index]}</button>
+      </li>
+      `;
+    }
+  }
+});
+
 
 $(window).scroll(function() {
   const scrollValue = $(document).scrollTop();
