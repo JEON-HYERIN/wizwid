@@ -240,31 +240,60 @@
 }
 
 /* lookbook */
-.section-lookbook {
+.section-lookbook .content {
   margin: 0 -176px;
 }
-
 .section-lookbook .lookbook-list-wrap {
   width: 100%;
-  /* height: 100% !important; */
-  /* margin-bottom: 30px; */
-  /* margin-right: -60px; */
-}
-.section-lookbook .lookbook-list {}
-.section-lookbook .lookbook-item {
-  height: 100%;
-}
-.section-lookbook .swiper-slide-active {
-  /* transition: all 600ms; */
 }
 .section-lookbook .link-lookbook {
   display: flex;
   flex-direction: column-reverse;
 }
+
+.section-lookbook .lookbook-list .text-box {
+  position: absolute;
+  top: 85px;
+  left: -120px;
+  right: 200px;
+  z-index: 1;
+}
+.section-lookbook .lookbook-list .title {
+  max-height: 104px;
+  margin-bottom: 20px;
+  margin-left: 80px;
+  overflow: hidden;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 52px;
+  opacity: 0;
+}
+
+.section-lookbook .lookbook-list .desc {
+  max-height: 40px;
+  margin-left: 80px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0;
+}
+.section-lookbook .lookbook-item.swiper-slide-active .title,
+.section-lookbook .lookbook-item.swiper-slide-active .desc {
+  margin-left: 0;
+  opacity: 1;
+  transition-property: opacity, margin;
+  transition-duration: .4s;
+}
+.section-lookbook .lookbook-item.swiper-slide-active .title {
+  transition-delay: 1s;
+}
+.section-lookbook .lookbook-item.swiper-slide-active .desc {
+  transition-delay: 1.2s;
+}
 .section-lookbook .lookbook-list .thumb-box {
   position: relative;
+  height: 0;
   padding-top: 119.42%;
-  /* padding-top: 128%; */
 }
 .section-lookbook .lookbook-list .thumb-box img {
   position: absolute;
@@ -282,113 +311,75 @@
   transform: scale(1);
   opacity: 1;
 } 
-.section-lookbook .lookbook-list .text-box {
-  position: absolute;
-  top: 85px;
-  left: -120px;
-  right: 200px;
-  z-index: 1;
-}
-.section-lookbook .lookbook-list .title {
-  font-size: 42px;
-    font-weight: 300;
-    line-height: 52px;
-    max-height: 104px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    margin-left: 80px;
-    opacity: 0;
-}
-
-.section-lookbook .lookbook-list .desc {
-  font-size: 14px;
-    line-height: 20px;
-    max-height: 40px;
-    overflow: hidden;
-    margin-left: 80px;
-    opacity: 0;
-}
-.section-lookbook .lookbook-item.swiper-slide-active .title,
-.section-lookbook .lookbook-item.swiper-slide-active .desc {
-  opacity: 1;
-  margin-left: 0;
-  transition-property: opacity, margin;
-  transition-duration: .4s;
-  
-}
-.section-lookbook .lookbook-item.swiper-slide-active .title {
-  transition-delay: 1s;
-}
-.section-lookbook .lookbook-item.swiper-slide-active .desc {
-  transition-delay: 1.2s;
-}
 .section-lookbook .lookbook-list-wrap .btn-arrow {
-  margin-top: -32.5px;
+  background-color: transparent;
 }
 .section-lookbook .lookbook-list-wrap .btn-prev {
-  left: 21%;
+  left: 26%;
 }
 .section-lookbook .lookbook-list-wrap .btn-next {
-  right: 21%; 
+  right: 26%; 
 }
 .section-lookbook .product-list-wrap {
   position: relative;
   width: 31.5%;
   margin-top: 30px;
-  /* opacity: 0; */
 }
 .section-lookbook .swiper-slide-active .product-list-wrap {
   opacity: 1;
 }
-.section-lookbook .product-item {
-  /* width: 25%; */
-    /* padding: 0px 5px; */
-}
-.section-lookbook .product-list {}
-.section-lookbook .link-product {
-  /* display: block; */
-}
 .section-lookbook .product-list .thumb-box {
   position: relative;
-    padding-top: 119.25%;
-    height: auto;
-    max-height: unset;
-    min-height: unset;
+  padding-top: 119.25%;
+  height: 0;
 }
 .section-lookbook .product-list .thumb-box img {
   position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: unset;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .section-lookbook .product-list .info-box {
-  padding-right: 14px
+  padding-right: 14px;
 }
-.section-lookbook .product-list .brand {}
-.section-lookbook .product-list .product {}
-.section-lookbook .product-list .price {}
-.section-lookbook .product-list .discount-price {}
-.section-lookbook .product-list .discount-rate {}
 .section-lookbook .product-list .btn-like {
-  top: 0px;
-  right: 0px;
-}
-.section-lookbook .swiper-pagination-progressbar {
-  position: static;
-  height: 2px;
-  background: #cccccc;
-  margin-top: 30px;
-}
-.section-lookbook .swiper-pagination-progressbar-fill {
-  background: #000000;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 34px;
+  background-size: 16px auto;
 }
 .section-lookbook .sub-lookbook .product-list-wrap {
   display: none;
 }
 .section-lookbook .sub-lookbook .product-list-wrap.is-visible {
   display: block;
+}
+.section-lookbook .product-list-wrap.vatka .brand {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.section-lookbook .product-list-wrap.vatka .brand::after {
+  content: '';
+  display: inline-block;
+  width: 11px;
+  height: 16px;
+  background: url("../images/common/ico_leaf_02.svg") no-repeat center;
+}
+.section-lookbook .sub-lookbook .swiper-pagination-lock {
+  display: block;
+}
+.section-lookbook .sub-lookbook .swiper-pagination-progressbar {
+  position: static;
+  height: 2px;
+  margin-top: 30px;
+  background-color: #ccc;
+}
+.section-lookbook .sub-lookbook .swiper-pagination-progressbar-fill {
+  background: #000;
 }
 
 .section-keyword .keyword-item {

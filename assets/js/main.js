@@ -52,10 +52,11 @@ new Swiper('.section-wish .product-list-wrap', {
   },
 });
 
-const lookbookSlide1 = new Swiper('.section-lookbook .lookbook-list-wrap', {
-  // autoplay: {
-  //   delay: 3000
-  // },
+// lookbook
+const lookbookSwiper = new Swiper('.section-lookbook .lookbook-list-wrap', {
+  autoplay: {
+    delay: 3000
+  },
   loop: true,
   speed: 600,
   slidesPerView: '3',
@@ -89,37 +90,6 @@ const subLookbook = new Swiper('.section-lookbook .sub-lookbook .product-list-wr
   observer: true,
   observeParents: true,
 });
-
-// const lookbookSlide2 = new Swiper('.section-lookbook .product-list-wrap', {
-//   speed: 600,
-//   slidesPerView: 'auto',
-//   pagination: {
-//     el: ".section-lookbook .swiper-pagination",
-//     type: "progressbar",
-//   },
-//   on:{
-//     'reachEnd':function(){
-//       cnt = this.slides.length
-//       realIdx = this.realIndex+1;
-//       if(cnt === realIdx){
-//         lookbookSlide1.slideNext();
-//       }
-//     },
-//     'reachBeginning':function(){
-//       realIdx = this.realIndex;
-//       if(0 === realIdx){
-//         lookbookSlide1.slidePrev();
-//       }
-//     }
-//   }
-// });
-
-// lookbookSlide1.on('slideChange', function() {
-//   idx = lookbookSlide1.realIndex;
-//   console.log(idx);
-//   lookbookSlide2.slideToLoop(idx)
-// })
-
 
 new Swiper('.section-keyword .keyword-list-wrap', {
   slidesPerView: 'auto',
