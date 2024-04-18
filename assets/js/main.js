@@ -252,27 +252,30 @@ window.addEventListener('scroll', () => {
 })
 
 // sale - countdown
-counter();
-function counter() {
+function dayCount() {
   const timeEls = document.querySelectorAll('.section-sale .time');
-  const dday = new Date('November 18, 2025 23:59:59').getTime(); //디데이
+  
+  const today = new Date();
+  const dday = new Date(2024, 10, 18);
+  const timeGap = dday.getTime() - today.getTime();
 
-  setInterval(function() {
-    const now = new Date(); //현재 날짜 가져오기
-    const diff = dday - now;
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  const remainDay = Math.ceil(timeGap / (1000 * 60 * 60 * 24));
+  
+  const hours = String(Math.floor(timeGap / (1000 * 60 * 60) % 24)).padStart(2, '0');
+  const minutes = String(Math.floor(timeGap / (1000 * 60) % 60)).padStart(2, '0');
+  const seconds = String(Math.floor((timeGap / 1000) % 60)).padStart(2, '0');
 
-    if (diff < 0) {
-      timeEls.forEach(function(timeEl) {
-        timeEl.remove();
-      })
-    } else {
-      timeEls.forEach(function(timeEl) {
-        timeEl.textContent = `${String(hours).padStart(2, 0)}h : ${String(minutes).padStart(2, 0)}m : ${String(seconds).padStart(2, 0)}s`;
-      });
-    }
-  }, 1000);
+  if(timeGap <= 0) {
+    clearInterval(countdownInterval);
+    
+    timeEls.forEach(function(timeEl) {
+      timeEl.remove();
+    })
+  }
+
+  timeEls.forEach(function(timeEl) {
+    timeEl.textContent = `${String(hours).padStart(2, 0)}h : ${String(minutes).padStart(2, 0)}m : ${String(seconds).padStart(2, 0)}s`;
+  });
 }
+
+const countdownInterval = setInterval(dayCount, 1000);
