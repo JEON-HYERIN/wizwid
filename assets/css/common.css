@@ -157,6 +157,7 @@ i[class*="ico-"] {
 }
 
 .common-title {
+  display: block;
   max-height: 104px;
   font-size: 42px;
   font-weight: 300;
