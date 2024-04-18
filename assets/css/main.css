@@ -588,6 +588,36 @@
   height: auto;
   object-fit: cover;
 }
+
+/* capture */
+.section-capture .headline-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.section-capture .common-headline {
+  margin-bottom: 0;
+}
+.section-capture .btn-refresh {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 6px;
+  padding: 0 14px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 38px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+.section-capture .btn-refresh::after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 15px;
+  background: url("../images/common/ico_refresh_01.svg") no-repeat center;
+}
 .section-capture .capture-list {
   display: grid;
   grid-template-columns: repeat(2, 2fr 1fr);
