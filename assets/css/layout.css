@@ -18,7 +18,13 @@ body {
 
 #wrap {
   min-width: 1260px;
-  min-height: 8000px;
+}
+
+.main-content {
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 0px 50px;
+  overflow: hidden;
 }
 
 /* header */
@@ -28,6 +34,7 @@ body {
 }
 
 .fixed-header {
+  min-width: 1260px;
   width: 100%;
   height: 126px;
   background-color: #fff;
@@ -58,7 +65,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 15px;
+  column-gap: 55px;
 }
 
 .header .group-util .search-area {
@@ -190,15 +197,24 @@ body {
   content: '';
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 46%;
   width: 1px;
   height: 13px;
   background-color: #000;
 }
 
-.header .gnb-item.home {
+.header .gnb-item.home,
+.header .gnb-item.more {
   display: none;
+}
+
+.header .gnb-item.more .link-gnb::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 5px;
+  margin-left: 3px;
+  background: url("../images/common/ico_select_off01.svg") no-repeat center;
 }
 
 .header .link-gnb {
@@ -241,9 +257,11 @@ body {
   left: 0;
   right: 0;
   z-index: 9;
+  min-width: 1260px;
+  width: 100%;
   justify-content: space-between;
-  background-color: #fff;
   padding: 30px 50px 78px;
+  background-color: #fff;
 }
 .header .lnb-container.is-visible {
   display: flex;
@@ -306,9 +324,9 @@ body {
 .header .lnb-container::before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 40%;
-  transform: translateY(-50%);
+  top: 27px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 1px;
   height: 75%;
   padding-left: 50px;
@@ -486,4 +504,35 @@ body {
   display: block;
   width: 57px;
   height: 57px;
+}
+
+/* media query */
+@media screen and (max-width: 1750px) {
+  .header.is-fixed .gnb-item.more {
+    display: block;
+  }
+  .header.is-fixed .gnb-item.more ~ .gnb-item {
+    display: none;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1700px) {
+  .header .link-gnb {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  /* header */
+  .header .link-gnb {
+    font-size: 13px;
+  }
+  .header .lnb-container::before {
+    top: 5%;
+    left: 56%;
+    transform: translateY(0);
+  }
+  .header .lnb-container .banner-list {
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 20px;
+  }
 }

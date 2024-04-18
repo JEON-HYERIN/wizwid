@@ -37,11 +37,21 @@ i[class*="ico-"] {
   display: none;
 }
 
+.swiper-pagination-progressbar {
+  position: static;
+  height: 2px !important;
+  background-color: #ccc;
+}
+.swiper-pagination-progressbar-fill {
+  background-color: #000 !important;
+}
+
 .btn-arrow {
+  top: 50%;
+  z-index: 1;
   width: 40px;
   height: 65px;
   margin-top: 0;
-  top: 50%;
   transform: translateY(-50%);
   background-color: #fff;
   background-repeat: no-repeat;
