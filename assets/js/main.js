@@ -207,6 +207,11 @@ new Swiper('.section-pick .pick-list-wrap', {
   },
 });
 
+$('.section-pick .btn-more').on('click', function() {
+  $('.section-pick .map').removeClass('is-visible');
+  $(this).parent().addClass('is-visible');
+});
+
 // editorial
 new Swiper('.section-editorial .editorial-list-wrap', {
   loop: true,

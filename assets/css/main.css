@@ -805,6 +805,83 @@
   object-fit: cover;
 }
 
+.section-pick .map {
+  position: absolute;
+}
+
+.section-pick .map.is-visible .btn-more::after,
+.section-pick .map.is-visible .tooltip {
+  display: block;
+}
+
+.section-pick .btn-more {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  background: url("../images/main/ico_plus.svg") no-repeat center/51px auto;
+}
+
+.section-pick .btn-more::after {
+  display: none;
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 5px;
+  width: 0;
+  height: 0;
+  border-width: 0 12px 12px 12px;
+  border-style: solid;
+  border-color: currentcolor transparent rgba(255, 255, 255, 0.9);
+}
+
+.section-pick .tooltip {
+  display: none;
+  position: absolute;
+  top: 46px;
+  width: 140px;
+  height: 62px;
+  padding: 13px 14px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.section-pick .tooltip .text {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.section-pick .pick-item.ymcl .map {
+  top: 28.61%;
+  left: 70.29%;
+}
+
+.section-pick .pick-item.ymcl .tooltip {
+  left: -81.346px;
+}
+
+.section-pick .pick-item.girl .map {
+  top: 24.78%;
+  left: 70.80%;
+}
+
+.section-pick .pick-item.girl .tooltip {
+  left: -81.9598px;
+}
+
+.section-pick .pick-item.dragon .map {
+  top: 58.26%;
+  left: 38.27%;
+}
+
+.section-pick .pick-item.dragon .tooltip {
+  left: -42.9219px;
+}
+
 .section-pick .pick-item {
   display: flex;
   flex-direction: column-reverse;
