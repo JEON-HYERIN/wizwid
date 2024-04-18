@@ -250,3 +250,29 @@ window.addEventListener('scroll', () => {
     topBtn.classList.add(CLASSNAME);
   }
 })
+
+// sale - countdown
+counter();
+function counter() {
+  const timeEls = document.querySelectorAll('.section-sale .time');
+  const dday = new Date('November 18, 2025 23:59:59').getTime(); //디데이
+
+  setInterval(function() {
+    const now = new Date(); //현재 날짜 가져오기
+    const diff = dday - now;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    if (diff < 0) {
+      timeEls.forEach(function(timeEl) {
+        timeEl.remove();
+      })
+    } else {
+      timeEls.forEach(function(timeEl) {
+        timeEl.textContent = `${String(hours).padStart(2, 0)}h : ${String(minutes).padStart(2, 0)}m : ${String(seconds).padStart(2, 0)}s`;
+      });
+    }
+  }, 1000);
+}
