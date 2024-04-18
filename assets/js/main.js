@@ -19,7 +19,7 @@ new Swiper('.section-visual .swiper', {
   },
   loop: true,
   speed: 600,
-  spaceBetween: 20,
+  spaceBetween: 12,
   slidesPerView: 'auto',
   navigation: {
     prevEl: '.section-visual .swiper-button-prev',
@@ -28,6 +28,14 @@ new Swiper('.section-visual .swiper', {
   pagination: {
     el: ".section-visual .swiper-pagination",
     type: "progressbar",
+  },
+  breakpoints: {
+    1680: {
+      spaceBetween: 16,
+    },
+    1920: {
+      spaceBetween: 20,
+    }
   }
 });
 
@@ -44,12 +52,18 @@ new Swiper('.section-benefit .benefit-list-wrap', {
   },
 });
 
+// wish
 new Swiper('.section-wish .product-list-wrap', {
-  slidesPerView: 'auto',
+  slidesPerView: 5,
   navigation: {
     prevEl: '.section-wish .btn-prev',
     nextEl: '.section-wish .btn-next',
   },
+  breakpoints: {
+    1501: {
+      slidesPerView: 6
+    }
+  }
 });
 
 // lookbook
@@ -81,7 +95,7 @@ const lookbookSwiper = new Swiper('.section-lookbook .lookbook-list-wrap', {
 
 const subLookbook = new Swiper('.section-lookbook .sub-lookbook .product-list-wrap', {
   speed: 600,
-  slidesPerView: 4,
+  slidesPerView: 3,
   spaceBetween: 10,
   pagination: {
     el: '.sub-lookbook .swiper-pagination',
@@ -89,25 +103,42 @@ const subLookbook = new Swiper('.section-lookbook .sub-lookbook .product-list-wr
   },
   observer: true,
   observeParents: true,
+  breakpoints: {
+    1501: {
+      slidesPerView: 4
+    }
+  }
 });
 
+// keyword
 new Swiper('.section-keyword .keyword-list-wrap', {
-  slidesPerView: 'auto',
+  slidesPerView: 2,
   loop: true,
   speed: 600,
   navigation: {
     prevEl: '.section-keyword .btn-prev',
     nextEl: '.section-keyword .btn-next',
   },
+  breakpoints: {
+    1501: {
+      slidesPerView: 3
+    }
+  }
 });
 
+// sale
 new Swiper('.section-sale .product-list-wrap', {
-  slidesPerView: 'auto',
+  slidesPerView: 4,
   speed: 400,
   navigation: {
     prevEl: '.section-sale .btn-prev',
     nextEl: '.section-sale .btn-next',
   },
+  breakpoints: {
+    1501: {
+      slidesPerView: 5
+    }
+  }
 });
 
 const brandSwiper = new Swiper('.section-brand .brand-list-wrap', {
