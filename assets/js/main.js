@@ -5,17 +5,39 @@ $(function () {
   });
 })
 
+// header
+$(window).scroll(function () {
+  const scrollValue = $(document).scrollTop();
+  if (scrollValue > 0) {
+    $('.header').addClass('is-fixed');
+  } else {
+    $('.header').removeClass('is-fixed');
+  }
+})
+
+$('.link-gnb').on('mouseenter', function () {
+  $('.lnb-container').removeClass('is-visible');
+  $(this).siblings('.lnb-container').addClass('is-visible');
+})
+
+$('.lnb-container').on('mouseleave', function () {
+  $('.lnb-container').removeClass('is-visible');
+})
+
 new Swiper('.rolling-banner', {
   autoplay: {
-    delay: 3000,
+    delay: 2000,
+    disableOnInteraction: false
   },
   loop: true,
   direction: 'vertical'
 });
 
+// visual
 new Swiper('.section-visual .swiper', {
   autoplay: {
     delay: 3000,
+    disableOnInteraction: false
   },
   loop: true,
   speed: 600,
@@ -39,11 +61,13 @@ new Swiper('.section-visual .swiper', {
   }
 });
 
+// new
 new Swiper('.section-new .category-list-wrap', {
   slidesPerView: 6,
   spaceBetween: 2
 });
 
+// benefit
 new Swiper('.section-benefit .benefit-list-wrap', {
   slidesPerView: 'auto',
   navigation: {
@@ -69,7 +93,8 @@ new Swiper('.section-wish .product-list-wrap', {
 // lookbook
 const lookbookSwiper = new Swiper('.section-lookbook .lookbook-list-wrap', {
   autoplay: {
-    delay: 3000
+    delay: 3000,
+    disableOnInteraction: false
   },
   loop: true,
   speed: 600,
@@ -81,11 +106,11 @@ const lookbookSwiper = new Swiper('.section-lookbook .lookbook-list-wrap', {
     nextEl: '.section-lookbook .btn-next',
   },
   on: {
-    slideChange: function() {
+    slideChange: function () {
       const subLookbook = document.querySelectorAll('.sub-lookbook .product-list-wrap');
       const realIndex = this.realIndex;
 
-      subLookbook.forEach(function(el, index) {
+      subLookbook.forEach(function (el, index) {
         el.classList.remove('is-visible');
         subLookbook[realIndex].classList.add('is-visible');
       });
@@ -93,6 +118,7 @@ const lookbookSwiper = new Swiper('.section-lookbook .lookbook-list-wrap', {
   }
 });
 
+// sublookbook
 const subLookbook = new Swiper('.section-lookbook .sub-lookbook .product-list-wrap', {
   speed: 600,
   slidesPerView: 3,
@@ -141,9 +167,11 @@ new Swiper('.section-sale .product-list-wrap', {
   }
 });
 
+// brand
 const brandSwiper = new Swiper('.section-brand .brand-list-wrap', {
   autoplay: {
-    delay: 4000
+    delay: 4000,
+    disableOnInteraction: false
   },
   loop: true,
   slidesPerView: 1,
@@ -154,19 +182,20 @@ const brandSwiper = new Swiper('.section-brand .brand-list-wrap', {
     nextEl: '.section-brand .btn-next',
   },
   on: {
-    slideChange: function() {
+    slideChange: function () {
       const index = this.realIndex;
       $('.section-brand .tab-item').eq(index).addClass('is-active').siblings().removeClass('is-active');
     }
   }
 });
 
-$('.section-brand .btn-tab').click(function() {
+$('.section-brand .btn-tab').click(function () {
   const index = $(this).parent().index();
   brandSwiper.slideToLoop(index);
   $('.section-brand .tab-item').eq(index).addClass('is-active').siblings().removeClass('is-active');
 });
 
+// pick
 new Swiper('.section-pick .pick-list-wrap', {
   loop: true,
   slidesPerView: 3,
@@ -178,6 +207,7 @@ new Swiper('.section-pick .pick-list-wrap', {
   },
 });
 
+// editorial
 new Swiper('.section-editorial .editorial-list-wrap', {
   loop: true,
   speed: 900,
@@ -199,30 +229,14 @@ new Swiper('.section-editorial .editorial-list-wrap', {
   }
 });
 
-
-$(window).scroll(function() {
-  const scrollValue = $(document).scrollTop();
-  if(scrollValue > 0) {
-    $('.header').addClass('is-fixed');
-  } else {
-    $('.header').removeClass('is-fixed');
-  }
-})
-
-$('.link-gnb').on('mouseenter', function() {
-  $('.lnb-container').removeClass('is-visible');
-  $(this).siblings('.lnb-container').addClass('is-visible');
-})
-
-$('.lnb-container').on('mouseleave', function() {
-  $('.lnb-container').removeClass('is-visible');
-})
-
 // top btn
 const topBtn = document.querySelector('.btn-top');
 
 topBtn.addEventListener('click', () => {
-  window.scrollTo({top: 0, behavior: 'smooth'});
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
 
 window.addEventListener('scroll', () => {
@@ -230,7 +244,7 @@ window.addEventListener('scroll', () => {
   const targetPosition = target.getBoundingClientRect().top;
   const CLASSNAME = 'is-invisible';
 
-  if(window.scrollY >= targetPosition) {
+  if (window.scrollY >= targetPosition) {
     topBtn.classList.remove(CLASSNAME);
   } else {
     topBtn.classList.add(CLASSNAME);
