@@ -98,12 +98,12 @@ i[class*="ico-"] {
 }
 
 .product-list .name {
-  margin-bottom: 20px;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
+  margin-bottom: 20px;
   font-size: 13px;
   line-height: 18px;
 }
