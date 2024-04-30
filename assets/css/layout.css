@@ -23,7 +23,7 @@ body {
 .main-content {
   max-width: 1900px;
   margin: 0 auto;
-  padding: 0px 50px;
+  padding: 0 50px;
   overflow: hidden;
 }
 
@@ -161,7 +161,7 @@ body {
   top: 10px;
   right: 2px;
   height: 15px;
-  padding: 0px 6px;
+  padding: 0 6px;
   font-size: 10px;
   line-height: 15px;
   color: #fff;
