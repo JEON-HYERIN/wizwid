@@ -364,7 +364,6 @@ body {
   line-height: 20px;
 }
 
-.header.is-fixed .logo,
 .header.is-fixed .rolling-banner {
   display: none;
 }

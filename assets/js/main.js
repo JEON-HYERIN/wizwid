@@ -10,8 +10,10 @@ $(window).scroll(function () {
   const scrollValue = $(document).scrollTop();
   if (scrollValue > 0) {
     $('.header').addClass('is-fixed');
+    $('.header .logo').addClass('blind');
   } else {
     $('.header').removeClass('is-fixed');
+    $('.header .logo').removeClass('blind');
   }
 })
 
